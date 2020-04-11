@@ -10,9 +10,9 @@
 <body>
 <h1>User Preview</h1>
 <hr>
-<p>Name : <?php echo $name ?></p>
-<p>Email : <?php echo $email ?></p>
-<p>Phone : <?php echo $phone ?></p>
-<a href="<?php echo url('pnt/about/form') ?>">Back</a>
+<p>Name : {{ $name }}</p>
+<p>Email : {{ $email }}</p>
+<p>Phone : {{ $phone }}</p>
+<a href="{{ route('about.form') }}">Back</a>
 </body>
 </html>

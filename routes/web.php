@@ -18,5 +18,6 @@ Route::get('/', function () {
 });
 Route::get('pnt','PeoplentechController@index');
 Route::get('peoplentech/about','PeoplentechController@about');
-Route::get('pnt/about/form','PeoplentechController@form');
-Route::post('pnt/about/preview','PeoplentechController@preview');
+Route::get('pnt/about/form','PeoplentechController@form')->name('about.form');
+Route::post('preview','PeoplentechController@preview')
+    ->name('preview');
