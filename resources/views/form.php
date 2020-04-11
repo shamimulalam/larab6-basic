@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>About Form</h1>
-    <form action="<?php echo url('pnt/about/preview') ?>">
+    <form action="<?php echo url('pnt/about/preview') ?>" method="post">
+        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
         <input type="text" name="name" placeholder="Enter your name">
         <br>
         <input type="email" name="email" placeholder="Enter your email address">

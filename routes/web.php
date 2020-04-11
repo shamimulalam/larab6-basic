@@ -19,4 +19,4 @@ Route::get('/', function () {
 Route::get('pnt','PeoplentechController@index');
 Route::get('peoplentech/about','PeoplentechController@about');
 Route::get('pnt/about/form','PeoplentechController@form');
-Route::get('pnt/about/preview','PeoplentechController@preview');
+Route::post('pnt/about/preview','PeoplentechController@preview');
