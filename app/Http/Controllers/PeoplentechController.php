@@ -16,4 +16,13 @@ class PeoplentechController extends Controller
         $details = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet animi commodi eius est eveniet explicabo hic ipsam iure laborum minima nobis quia quod ratione reiciendis, tempora unde ut veritatis vitae.';
         return view('about',compact('title','details'));
     }
+    public function form(){
+        return view('form');
+    }
+    public function preview(Request $request){
+        $name = $request->name;
+        $email = $request->email;
+        $phone = $request->phone;
+        return view('preview',compact('name','email','phone'));
+    }
 }
