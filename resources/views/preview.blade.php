@@ -10,9 +10,12 @@
 <body>
 <h1>User Preview</h1>
 <hr>
-<p>Name : {{ $name }}</p>
-<p>Email : {{ $email }}</p>
-<p>Phone : {{ $phone }}</p>
+@foreach($result as $r)
+    <p>ID : {{ $r->id }}</p>
+    <p>Name : {{ $r->name }}</p>
+    <p>Email : {{ $r->email }}</p>
+    <p>Phone : {{ $r->phone }}</p>
+@endforeach
 <a href="{{ route('about.form') }}">Back</a>
 </body>
 </html>

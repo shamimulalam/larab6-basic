@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class PeoplentechController extends Controller
 {
@@ -20,9 +21,12 @@ class PeoplentechController extends Controller
         return view('form');
     }
     public function preview(Request $request){
-        $name = $request->name;
-        $email = $request->email;
-        $phone = $request->phone;
-        return view('preview',compact('name','email','phone'));
+        $data = [];
+        $data['name'] = $request->full_name;
+        $data['email'] = $request->email_address;
+        $data['phone'] = $request->phone_number;
+//        DB::table('about')->insert($data);
+        $result = DB::table('about')->get();
+        return view('preview',compact('result'));
     }
 }

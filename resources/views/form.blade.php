@@ -11,11 +11,11 @@
     <h1>About Form</h1>
     <form action="{{ route('preview') }}" method="post">
         @csrf
-        <input type="text" name="name" placeholder="Enter your name">
+        <input type="text" name="full_name" placeholder="Enter your name">
         <br>
-        <input type="email" name="email" placeholder="Enter your email address">
+        <input type="email" name="email_address" placeholder="Enter your email address">
         <br>
-        <input type="text" name="phone" placeholder="Enter your phone number">
+        <input type="text" name="phone_number" placeholder="Enter your phone number">
         <br>
         <button>Preview</button>
     </form>
