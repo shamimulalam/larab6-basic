@@ -22,3 +22,11 @@ Route::get('pnt/about/form','PeoplentechController@form')->name('about.form');
 Route::post('preview','PeoplentechController@preview')
     ->name('preview');
 Route::get('show','PeoplentechController@show')->name('show');
+
+
+Route::get('author/index','AuthorController@index')->name('author.index');
+Route::get('author/create','AuthorController@create')->name('author.create');
+Route::post('author/store','AuthorController@store')->name('author.store');
+Route::get('author/edit/{id}','AuthorController@edit')->name('author.edit');
+Route::put('author/update/{id}','AuthorController@update')->name('author.update');
+
