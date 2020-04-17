@@ -21,3 +21,4 @@ Route::get('peoplentech/about','PeoplentechController@about');
 Route::get('pnt/about/form','PeoplentechController@form')->name('about.form');
 Route::post('preview','PeoplentechController@preview')
     ->name('preview');
+Route::get('show','PeoplentechController@show')->name('show');

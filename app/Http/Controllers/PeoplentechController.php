@@ -25,7 +25,10 @@ class PeoplentechController extends Controller
         $data['name'] = $request->full_name;
         $data['email'] = $request->email_address;
         $data['phone'] = $request->phone_number;
-//        DB::table('about')->insert($data);
+        DB::table('about')->insert($data);
+        return redirect()->route('show');
+    }
+    public function show(){
         $result = DB::table('about')->get();
         return view('preview',compact('result'));
     }
