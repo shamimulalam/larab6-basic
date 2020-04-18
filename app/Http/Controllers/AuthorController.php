@@ -32,4 +32,8 @@ class AuthorController extends Controller
         DB::table('authors')->where('id',$id)->update($data);
         return redirect()->route('author.index');
     }
+    public function destroy($id){
+        DB::table('authors')->delete($id);
+        return redirect()->route('author.index');
+    }
 }

@@ -27,6 +27,12 @@
             <td>{{ $author->date_of_birth }}</td>
             <td>
                 <a href="{{ route('author.edit',$author->id) }}">Edit</a>
+                ||
+                <form action="{{ route('author.destroy',$author->id) }}" method="post">
+                    @csrf
+                    @method('delete')
+                    <button type="submit">Destroy</button>
+                </form>
             </td>
         </tr>
     @endforeach

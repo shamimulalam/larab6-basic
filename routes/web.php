@@ -29,4 +29,5 @@ Route::get('author/create','AuthorController@create')->name('author.create');
 Route::post('author/store','AuthorController@store')->name('author.store');
 Route::get('author/edit/{id}','AuthorController@edit')->name('author.edit');
 Route::put('author/update/{id}','AuthorController@update')->name('author.update');
+Route::delete('author/delete/{id}','AuthorController@destroy')->name('author.destroy');
 
