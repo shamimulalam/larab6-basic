@@ -9,13 +9,22 @@
 </head>
 <body>
 <h1>Create new book</h1>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <form action="{{ route('book.store') }}" method="post">
     @csrf
-    <input type="text" name="name" placeholder="Enter book name">
+    <input type="text" value="{{ old('name') }}" name="name" placeholder="Enter book name">
     <br>
-    <input type="text" name="author_name" placeholder="Enter author name">
+    <input type="text" value="{{ old('author_name') }}" name="author_name" placeholder="Enter author name">
     <br>
-    <input type="date" name="publish_date" >
+    <input type="date" value="{{ old('publish_date') }}" name="publish_date">
     <br>
     <button>Submit</button>
 </form>
